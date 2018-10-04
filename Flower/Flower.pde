@@ -15,7 +15,7 @@ void draw(){
   ballY=height/2 + r*sin(i);
   ellipse(ballX,ballY,r,r); 
   }
-  fill(200,0,0);
+  fill(#1555FF);
   ellipse(width/2,height/2,r*1.2,r*1.2);
 }  
  
