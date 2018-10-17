@@ -1,21 +1,40 @@
+
+
 int r=60;
 float ballX;
 float ballY;
+int n_petals=12;
+float ballxPos=(random(10,500));
+float ballyPos=(random(10,600));
+
+
+
 
 void setup() {
-  size(600,400);
+  size(1000,750);
   background(#43AF76);
 }
 
 void draw(){
+  
+ noStroke();
+ int petalColor=#F5E748;
+ 
+flower(r,n_petals,ballxPos,ballyPos,petalColor);
+  
+flower(r,n_petals,ballxPos,ballyPos,petalColor);
 
-  fill(#FFA005);
-  for (float i=0;i<PI*2;i+=2*PI/5) {
-  ballX=width/2 + r*cos(i);
-  ballY=height/2 + r*sin(i);
+flower(r,n_petals,ballxPos,ballyPos,petalColor);
+
+
+}  
+ void flower (float r, int n_petals, float ballxPos, float ballyPos, int petalColor) {
+     for (float i=0;i<PI*2;i+=2*PI/n_petals) {
+  ballX=ballxPos + r*cos(i);
+  ballY=ballyPos + r*sin(i);
+  fill(#F54856);
   ellipse(ballX,ballY,r,r); 
   }
-  fill(#1555FF);
-  ellipse(width/2,height/2,r*1.2,r*1.2);
-}  
- 
+  fill(petalColor);
+  ellipse(ballxPos,ballyPos,r,r);
+ }
