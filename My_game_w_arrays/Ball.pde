@@ -9,6 +9,8 @@ class Ball {
   float xdirection = 1;
   float ydirection = 1;
   
+ 
+  
   Ball (float xpos_temp, float ypos_temp) {
     xpos = xpos_temp;
     ypos = ypos_temp;
@@ -24,10 +26,11 @@ class Ball {
     ypos = ypos + (yspeed * ydirection); 
 
     // movement (ball)
-    if (ypos > rectY && ypos < rectY+rectWidth && xpos > rectX && xpos < rectX+rectWidth) {
+    if (ypos > rectY && ypos < rectY+rectWidth && xpos > mouseX && xpos < mouseX+rectWidth) {
       ydirection *= -1.01;
       points = points + 1;
     }
+   else points = points + 0;
 
     if (xpos > width-rad || xpos < rad) {
       xdirection *= -1.10;

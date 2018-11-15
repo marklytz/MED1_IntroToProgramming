@@ -7,7 +7,7 @@ float rectX = 400;
 float rectY = 550;
 int rectWidth = 100;
 int rectHeight = 30;
-int ballAmount = 6;
+int ballAmount = 3;
 
 
 //Scoring system
@@ -63,7 +63,7 @@ void draw() {
 
 
     // Slider
-    rect(rectX, rectY, rectWidth, rectHeight);
+    rect(mouseX, rectY, rectWidth, rectHeight);
 
     textSize(24);
     
@@ -73,22 +73,7 @@ void draw() {
 
 }
 
-void keyPressed() {
-  
-    //Controls for slider
-    if (keyPressed) {
-      if (key==CODED) {
-        if (keyCode == LEFT) {
-          rectX= rectX -50;
-        }
-      }
-    }
-    if (keyPressed) {
-      if (key == CODED) {
-        if (keyCode == RIGHT) {
-          rectX= rectX +50;
-        }
-      }
-    }
 
-}
+  
+   
+    
